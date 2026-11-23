@@ -1,30 +1,41 @@
 {
-  "name": "flypix-backend",
-  "version": "0.0.0",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "dev": "nodemon --watch src --ext ts --exec \"npm run build && node dist/index.js\"",
-    "devCon": "concurrently -k -n compile,node \"tsc --watch --preserveWatchOutput\" \"nodemon --watch dist --ext js dist/index.js\"",
-    "format": "prettier --write \"src/**/*.ts\" \"dist/**/*.js\""
-  },
-  "dependencies": {
-    "cookie-parser": "~1.4.4",
-    "debug": "~2.6.9",
-    "express": "~4.16.1",
-    "morgan": "~1.9.1"
-  },
-  "devDependencies": {
-    "@eslint/js": "^10.0.1",
-    "@tsconfig/node24": "^24.0.6",
-    "@types/express": "^5.0.6",
-    "concurrently": "^10.0.7",
-    "eslint": "^10.14.0",
-    "globals": "^17.14.0",
-    "nodemon": "^3.1.14",
-    "prettier": "^3.10.1",
-    "typescript": "^7.0.2"
-  }
+    "name": "flypix-backend",
+    "version": "0.0.0",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "tsc",
+        "start": "node dist/index.js",
+        "dev": "nodemon --watch src --ext ts --exec \"npm run build && node dist/index.js\"",
+        "devCon": "concurrently -k -n compile,node \"tsc --watch --preserveWatchOutput\" \"nodemon --watch dist --ext js dist/index.js\"",
+        "format": "prettier --write \"src/**/*.ts\" \"dist/**/*.js\" \"package.json\""
+    },
+    "dependencies": {
+        "cookie-parser": "~1.4.4",
+        "debug": "~2.6.9",
+        "dotenv": "^18.0.10",
+        "express": "~4.16.1",
+        "mongodb": "^7.9.1",
+        "mongoose": "^9.12.3",
+        "morgan": "~1.9.1",
+        "zod": "^4.6.7"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@tsconfig/node24": "^24.0.6",
+        "@types/express": "^5.0.6",
+        "concurrently": "^10.0.7",
+        "eslint": "^10.14.0",
+        "globals": "^17.14.0",
+        "nodemon": "^3.1.14",
+        "prettier": "^3.10.1",
+        "typescript": "^7.0.2"
+    },
+    "prettier": {
+        "semi": true,
+        "singleQuote": false,
+        "tabWidth": 4,
+        "trailingComma": "es5",
+        "printWidth": 100
+    }
 }
